@@ -31,7 +31,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CLRSupport>true</CLRSupport>
+    <CLRSupport>Pure</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -133,23 +133,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MyFirstUserControl.cpp" />
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="MyUserControl.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyFirstUserControl.h">
-      <FileType>CppControl</FileType>
-    </ClInclude>
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MyUserControl.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MyFirstUserControl.resx">
-      <DependentUpon>MyFirstUserControl.h</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl.resx">
+      <DependentUpon>MyUserControl.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

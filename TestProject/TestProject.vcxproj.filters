@@ -18,7 +18,7 @@
     <ClCompile Include="MyForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MyFirstUserControl.cpp">
+    <ClCompile Include="MyUserControl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -26,8 +26,8 @@
     <ClInclude Include="MyForm.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="MyFirstUserControl.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="MyUserControl.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

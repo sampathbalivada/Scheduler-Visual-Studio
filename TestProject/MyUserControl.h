@@ -11,12 +11,12 @@ using namespace System::Drawing;
 namespace TestProject {
 
 	/// <summary>
-	/// Summary for MyFirstUserControl
+	/// Summary for MyUserControl
 	/// </summary>
-	public ref class MyFirstUserControl : public System::Windows::Forms::UserControl
+	public ref class MyUserControl : public System::Windows::Forms::UserControl
 	{
 	public:
-		MyFirstUserControl(void)
+		MyUserControl(void)
 		{
 			InitializeComponent();
 			//
@@ -28,13 +28,15 @@ namespace TestProject {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~MyFirstUserControl()
+		~MyUserControl()
 		{
 			if (components)
 			{
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Button^  button1;
+	protected:
 
 	private:
 		/// <summary>
@@ -49,14 +51,26 @@ namespace TestProject {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// MyFirstUserControl
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(206, 110);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 0;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyUserControl::button1_Click);
+			// 
+			// MyUserControl
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->Name = L"MyFirstUserControl";
-			this->Size = System::Drawing::Size(442, 293);
+			this->Controls->Add(this->button1);
+			this->Name = L"MyUserControl";
+			this->Size = System::Drawing::Size(466, 254);
 			this->ResumeLayout(false);
 
 		}
