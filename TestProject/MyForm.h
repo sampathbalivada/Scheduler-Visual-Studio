@@ -1,5 +1,6 @@
 #pragma once
-
+#include "MyUserControl.h"
+#include "MyUserControl1.h"
 namespace TestProject {
 
 	using namespace System;
@@ -49,6 +50,12 @@ namespace TestProject {
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::Button^  button4;
 	private: System::Windows::Forms::Button^  button5;
+	private: TestProject::MyUserControl^  myUserControl1;
+	private: TestProject::MyUserControl1^  myUserControl11;
+
+
+
+
 
 
 	protected:
@@ -91,6 +98,8 @@ namespace TestProject {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->myUserControl11 = (gcnew TestProject::MyUserControl1());
+			this->myUserControl1 = (gcnew TestProject::MyUserControl());
 			this->panel1->SuspendLayout();
 			this->panel3->SuspendLayout();
 			this->SuspendLayout();
@@ -120,6 +129,7 @@ namespace TestProject {
 			// 
 			// button3
 			// 
+			this->button3->FlatAppearance->BorderColor = System::Drawing::Color::Black;
 			this->button3->FlatAppearance->BorderSize = 0;
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button3->Font = (gcnew System::Drawing::Font(L"Trebuchet MS", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
@@ -247,11 +257,27 @@ namespace TestProject {
 			this->button5->UseVisualStyleBackColor = true;
 			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
 			// 
+			// myUserControl11
+			// 
+			this->myUserControl11->Location = System::Drawing::Point(175, 132);
+			this->myUserControl11->Name = L"myUserControl11";
+			this->myUserControl11->Size = System::Drawing::Size(467, 250);
+			this->myUserControl11->TabIndex = 7;
+			// 
+			// myUserControl1
+			// 
+			this->myUserControl1->Location = System::Drawing::Point(175, 132);
+			this->myUserControl1->Name = L"myUserControl1";
+			this->myUserControl1->Size = System::Drawing::Size(466, 254);
+			this->myUserControl1->TabIndex = 6;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(673, 431);
+			this->Controls->Add(this->myUserControl11);
+			this->Controls->Add(this->myUserControl1);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->label1);
@@ -278,10 +304,12 @@ private: System::Void button5_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 	sidePanel->Height = button1->Height;
 	sidePanel->Top = button1->Top;
+	//myUserControl1->BringToFront();
 }
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 	sidePanel->Height = button2->Height;
 	sidePanel->Top = button2->Top;
+	//myUserControl11->BringToFront();
 }
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 	sidePanel->Height = button3->Height;

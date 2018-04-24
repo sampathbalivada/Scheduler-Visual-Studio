@@ -1,0 +1,4 @@
+String^ nameOfFile = dateTimePicker1->Value.ToString("ddMMyyyy");
+		String^ txt = ".txt";
+		String^ finalName = nameOfFile + txt;
+		label1->Text = finalName;
