@@ -136,6 +136,7 @@
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="MyUserControl.cpp" />
     <ClCompile Include="MyUserControl1.cpp" />
+    <ClCompile Include="MyUserControl2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -145,6 +146,9 @@
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="MyUserControl1.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="MyUserControl2.h">
       <FileType>CppControl</FileType>
     </ClInclude>
   </ItemGroup>
@@ -157,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyUserControl1.resx">
       <DependentUpon>MyUserControl1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl2.resx">
+      <DependentUpon>MyUserControl2.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

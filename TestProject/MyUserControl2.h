@@ -11,12 +11,12 @@ using namespace System::Drawing;
 namespace TestProject {
 
 	/// <summary>
-	/// Summary for MyUserControl
+	/// Summary for MyUserControl2
 	/// </summary>
-	public ref class MyUserControl : public System::Windows::Forms::UserControl
+	public ref class MyUserControl2 : public System::Windows::Forms::UserControl
 	{
 	public:
-		MyUserControl(void)
+		MyUserControl2(void)
 		{
 			InitializeComponent();
 			//
@@ -28,19 +28,13 @@ namespace TestProject {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~MyUserControl()
+		~MyUserControl2()
 		{
 			if (components)
 			{
 				delete components;
 			}
 		}
-
-	protected:
-
-	protected:
-
-	protected:
 
 	private:
 		/// <summary>
@@ -57,12 +51,11 @@ namespace TestProject {
 		{
 			this->SuspendLayout();
 			// 
-			// MyUserControl
+			// MyUserControl2
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::White;
-			this->Name = L"MyUserControl";
+			this->Name = L"MyUserControl2";
 			this->Size = System::Drawing::Size(510, 266);
 			this->ResumeLayout(false);
 
