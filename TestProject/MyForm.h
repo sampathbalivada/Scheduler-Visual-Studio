@@ -51,6 +51,7 @@ namespace TestProject {
 	private: System::Windows::Forms::Button^  button4;
 	private: System::Windows::Forms::Button^  button5;
 	private: TestProject::MyUserControl1^  myUserControl11;
+	private: TestProject::MyUserControl^  myUserControl1;
 
 
 
@@ -100,6 +101,7 @@ namespace TestProject {
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->myUserControl11 = (gcnew TestProject::MyUserControl1());
+			this->myUserControl1 = (gcnew TestProject::MyUserControl());
 			this->panel1->SuspendLayout();
 			this->panel3->SuspendLayout();
 			this->SuspendLayout();
@@ -265,12 +267,21 @@ namespace TestProject {
 			this->myUserControl11->Size = System::Drawing::Size(510, 266);
 			this->myUserControl11->TabIndex = 6;
 			// 
+			// myUserControl1
+			// 
+			this->myUserControl1->BackColor = System::Drawing::Color::White;
+			this->myUserControl1->Location = System::Drawing::Point(158, 139);
+			this->myUserControl1->Name = L"myUserControl1";
+			this->myUserControl1->Size = System::Drawing::Size(510, 266);
+			this->myUserControl1->TabIndex = 7;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
 			this->ClientSize = System::Drawing::Size(673, 431);
+			this->Controls->Add(this->myUserControl1);
 			this->Controls->Add(this->myUserControl11);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
@@ -298,12 +309,13 @@ private: System::Void button5_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 	sidePanel->Height = button1->Height;
 	sidePanel->Top = button1->Top;
-	//myUserControl1->BringToFront();
+	myUserControl1->BringToFront();
+	myUserControl1->refreshdata();
 }
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 	sidePanel->Height = button2->Height;
 	sidePanel->Top = button2->Top;
-	//myUserControl11->BringToFront();
+	myUserControl11->BringToFront();
 }
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 	sidePanel->Height = button3->Height;

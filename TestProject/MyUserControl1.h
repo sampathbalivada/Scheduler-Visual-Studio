@@ -83,7 +83,7 @@ namespace TestProject {
 			this->dateTimePicker1->Name = L"dateTimePicker1";
 			this->dateTimePicker1->Size = System::Drawing::Size(130, 20);
 			this->dateTimePicker1->TabIndex = 1;
-			this->dateTimePicker1->Value = System::DateTime(2018, 4, 20, 0, 0, 0, 0);
+			this->dateTimePicker1->Value = System::DateTime(2018, 5, 10, 0, 0, 0, 0);
 			// 
 			// label2
 			// 
@@ -114,6 +114,7 @@ namespace TestProject {
 			// label1
 			// 
 			this->label1->AutoSize = true;
+			this->label1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Trebuchet MS", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(6, 84);
@@ -207,7 +208,7 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 	
 	String^ title = textBox2->Text->ToString();
 	String^ description = textBox1->Text->ToString();
-	String^ data = title + "#*#*" + description;
+	String^ data = "Title:\r\n" + title + "\r\nDescription:\r\n" + description;
 	String^ nameOfFile = dateTimePicker1->Value.ToString("ddMMyyyy");
 	String^ pathToFile = "e:\\TestLocation\\";
 	String^ finalPath = pathToFile + nameOfFile + ".txt";

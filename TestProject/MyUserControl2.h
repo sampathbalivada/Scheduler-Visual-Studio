@@ -55,6 +55,7 @@ namespace TestProject {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::Color::White;
 			this->Name = L"MyUserControl2";
 			this->Size = System::Drawing::Size(510, 266);
 			this->ResumeLayout(false);
