@@ -119,6 +119,7 @@ namespace TestProject {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(154, 431);
 			this->panel1->TabIndex = 0;
+			//this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::panel1_Paint);
 			// 
 			// sidePanel
 			// 

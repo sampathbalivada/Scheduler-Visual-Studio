@@ -84,6 +84,7 @@ namespace TestProject {
 			this->Controls->Add(this->label4);
 			this->Name = L"MyUserControl";
 			this->Size = System::Drawing::Size(510, 266);
+			this->Load += gcnew System::EventHandler(this, &MyUserControl::MyUserControl_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -104,14 +105,14 @@ namespace TestProject {
 		{
 			StreamReader^ din = File::OpenText(finalPath);
 
-			String^ str;
+			/*String^ str;
 			int count = 0;
 			while ((str = din->ReadLine()) != nullptr)
 			{
 				count++;
 				datafromfile = datafromfile + str;
-			}
-			label4->Text = datafromfile;
+			}*/
+			label4->Text = din->ReadToEnd();
 		}
 		catch (Exception^ e)
 		{
@@ -121,5 +122,8 @@ namespace TestProject {
 				label4->Text = "problem reading file ";
 		}
 	}
-	};
+	private: System::Void MyUserControl_Load(System::Object^  sender, System::EventArgs^  e) {
+		refreshdata();
+	}
+};
 }

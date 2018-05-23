@@ -208,12 +208,14 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 	
 	String^ title = textBox2->Text->ToString();
 	String^ description = textBox1->Text->ToString();
-	String^ data = "Title:\r\n" + title + "\r\nDescription:\r\n" + description;
+	String^ data1 = "Title:\r\n" + title;
+	String^ data2 = "Description:\r\n" + description;
 	String^ nameOfFile = dateTimePicker1->Value.ToString("ddMMyyyy");
 	String^ pathToFile = "e:\\TestLocation\\";
 	String^ finalPath = pathToFile + nameOfFile + ".txt";
 	StreamWriter^ pwriter = gcnew StreamWriter(finalPath);
-	pwriter->WriteLine(data);
+	pwriter->WriteLine(data1);
+	pwriter->WriteLine(data2);
 	pwriter->Close();
 	textBox1->Clear();
 	textBox2->Clear();
