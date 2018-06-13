@@ -97,7 +97,7 @@ namespace TestProject {
 	}*/
 	public: System::Void refreshdata() {
 		DateTime datetime = DateTime::Now;
-		String^ datafromfile;
+		//String^ datafromfile;
 		String^ currentDate = datetime.ToString("ddMMyyyy");
 		String^ pathToFile = "e:\\TestLocation\\";
 		String^ finalPath = pathToFile + currentDate + ".txt";
@@ -119,7 +119,7 @@ namespace TestProject {
 			if (dynamic_cast<FileNotFoundException^>(e))
 				label4->Text = "No Schedule!!!";
 			else
-				label4->Text = "problem reading file ";
+				label4->Text = "Please confirm the existance of 'D:/Testlocation' folder.";
 		}
 	}
 	private: System::Void MyUserControl_Load(System::Object^  sender, System::EventArgs^  e) {
